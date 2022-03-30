@@ -1,0 +1,127 @@
+<!--Coded by Jéssica Lopes x21147477 - CA2 MARCH/2022 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mr Burrito ™</title>
+
+    <!--linking exernals files-->
+    <link href="external.css" rel="stylesheet" type="text/css">
+    <script src="jsfile.js"></script>
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:ital,wght@0,400;0,600;1,400&display=swap"
+          rel="stylesheet">
+
+    <!--favicon-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png">
+
+</head>
+<body>
+
+<header class="header">
+    <a href="Burrito.html" id="logo">MR BURRITO</a>
+    <nav>
+        <ul class="menu">
+            <li><a href="Burrito.html">Home</a></li>
+            <li><a href="Burrito.html">Menu</a></li>
+            <li><a href="Burrito.html">Find us</a></li>
+
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+<!--Starting the form -->
+    <div class="fromcontainer">
+        <form id="checkout" method="get" name="checkout" onsubmit="ValidateForm(); return false;">
+            <table>
+                <tr>
+                    <td>
+                        <h2> Order your burrito</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3>Login</h3>
+
+                        <label for="username">Username <br/>
+                            <input id="username" maxlength="35" name="username" onchange="ValidateUsername()"
+                                   type="text"
+                                   value=""></label>
+                        <div class="alert" id="usrmsg"></div>
+                        <div class="alert" id="usrmsg2"></div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><label for="password"> Password <br/> </label>
+                        <input id="password" maxlength="9" minlength="9" name="password" onchange="ValidatePassword()" type="password"
+                               value="">
+                        <p class="alert" id="passwordmsg"></p>
+                    </td>
+                </tr>
+                <tr>
+
+                    <!-- Size dropdown here -->
+                    <td>
+                        <h3>Order</h3>
+                        <label for="dropdown"> Chose a size </label><br/>
+                        <select id="dropdown" onchange="MSize();Calculation()">
+                            <option value="none">----Select----</option>
+                            <option value="Large">Large (&euro; 7)</option>
+                            <option value="Extra-Large">Extra Large (&euro; 9)</option>
+                            <option value="Super-Size">Super Size (&euro; 17,50)</option>
+                        </select>
+                        <div class="alert" id="sizemsg"></div>
+
+                        <div class="alert" id="sizemsg2"></div>
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="quantity">Quantity <br/> </label>
+                        <input id="quantity" min="0" name="quantity" onchange="Calculation();ValidateQtt()" type="number"
+                               value="">
+                        <div class="alert" id="qttmsg"></div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><label for="coupon"> Coupon code <br/> </label>
+                        <input id="coupon" onchange="Coupon();Calculation()" type="text">
+                        <div class="alert" id="couponmsg"></div>
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td id="totalcontainer">
+                        <p class="totaltitle">TOTAL</p>
+                        <p id="totalcalculated"></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button id="btn-checkout" type="submit">Submit</button>
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+
+</main>
+
+
+</body>
+</html>

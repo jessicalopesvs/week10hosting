@@ -1,0 +1,131 @@
+/*Coded by Jéssica Lopes x21147477 - CA2 MARCH/2022*/
+
+/*Header styling - none*/
+
+header, ul, li, p {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+/*
+Header Styling
+ */
+
+.header{
+    margin: 0;
+    background: #CCD663;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+
+}
+
+.menu{
+    display: flex;
+}
+
+#logo{
+    font-family: 'League Gothic', sans-serif;
+    font-size: 40px;
+}
+
+.menu li{
+     margin-left: 10px;
+     font-family: 'Montserrat', sans-serif;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px;
+}
+
+
+/*body styling*/
+
+body{
+    background-image: url("/img/burrito-bg.png");
+}
+
+
+main{
+    margin: 0 auto;
+}
+
+table{
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+}
+
+td{
+    width: 20%;
+    text-align: center;
+}
+
+
+.fromcontainer{
+    background: #DF5555;
+    width: 40%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border: 3px;
+    border-radius: 15px 50px ;
+}
+
+form{
+    font-family: 'Montserrat', sans-serif;
+}
+
+form h2{
+    text-align: center;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 70px;
+}
+input{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 10px;
+    width: 50%;
+}
+
+select{
+    width: 50%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#btn-checkout{
+    margin: 13px;
+    padding: 13px 100px;
+    background: #75B63C;
+
+}
+
+/* alert messages */
+
+.alert{
+    color: #600303;
+    background: #8dea8d;
+    width: 50%;
+    margin: 0 auto;
+    position: center;
+    margin: 15px auto;
+}
+
+/*Burrito animation */
+
+#burritoanimation{
+    width: 10%;
+}
